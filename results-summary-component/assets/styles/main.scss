@@ -1,0 +1,279 @@
+@import './settings';
+@import './normalize';
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    min-height: 100vh;
+    margin: 0 auto;
+}
+
+#box-components {
+    max-width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: 0px 20px 20px 0px hsla(224, 30%, 27%, 0.35);
+
+    #result-box {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+        border-radius: 25px;
+        padding: 2em;
+        text-align: center;
+
+        h1 {
+            font-size: 1.5em;
+            color: hsl(241, 100%, 89%);
+            font-weight: 500;
+        }
+
+        #circle-shape {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background: linear-gradient(hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+            width: 200px;
+            height: 200px;
+            margin: 15px 0;
+            border-radius: 100%;
+
+            h2 {
+                margin: 0 0 10px 0;
+                font-size: 4em;
+                font-weight: 800;
+                color: hsl(0, 0%, 100%);
+            }
+
+            p {
+                color: hsl(241, 100%, 80%);
+                margin: 0;
+            }
+        }
+
+        h3 {
+            color: hsl(0, 0%, 100%);
+            font-weight: 500;
+            margin: 10px 0;
+            font-size: 2em;
+        }
+
+        p {
+            width: 85%;
+            color: hsl(241, 100%, 85%);
+        }
+    }
+
+    #summary-box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: hsl(0, 0%, 100%);
+        border-radius: 25px;
+        padding: 2em;
+        text-align: center;
+
+        h1 {
+            display: block;
+            width: 100%;
+            text-align: left;
+            font-size: 1.5em;
+        }
+
+        .block {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 8px 0;
+            padding: 15px 15px;
+            border-radius: 10px;
+
+            .left-block {
+                width: 50%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: row;
+                margin: 0;
+
+                img {
+                    margin: 0 10px 0 0;
+                }
+
+                p {
+                    font-weight: 700;
+                    margin: 0;
+                    font-size: 1.2em;
+                }
+            }
+
+            .right-block {
+                width: 50%;
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: row;
+                margin: 0;
+
+                .value {
+                    margin: 0;
+                    font-size: 1.2em;
+                    color: hsl(224, 30%, 40%);
+                    font-weight: 800;
+                }
+
+                .of100 {
+                    font-size: 1.2em;
+                    margin: 0;
+                    font-weight: 800;
+                    margin-left: 10px;
+                    color: hsla(224, 30%, 40%, 0.5);
+                }
+            }
+        }
+
+        .reaction-block {
+            background: hsla(0, 100%, 67%, 0.1);
+
+            p {
+                color: hsla(0, 100%, 67%, 0.8);
+            }
+
+        }
+
+        .memory-block {
+            background: hsl(39, 100%, 56%, 0.1);
+
+            p {
+                color: hsl(39, 100%, 56%, 0.8);
+            }
+        }
+
+        .verbal-block {
+            background: hsl(166, 100%, 37%, 0.1);
+
+            p {
+                color: hsl(166, 100%, 37%, 0.8);
+            }
+        }
+
+        .visuel-block {
+            background: hsl(234, 85%, 45%, 0.1);
+
+            p {
+                color: hsl(234, 85%, 45%, 0.8);
+            }
+        }
+
+        button {
+            font-size: 1.1em;
+            font-weight: 400;
+            outline: none;
+            border: none;
+            padding: 1em;
+            border-radius: 50px;
+            margin-top: 30px;
+            color: hsl(0, 0%, 100%);
+            background: hsl(224, 30%, 27%);
+            width: 100%;
+            transition: 0.2s ease-in forwards;
+            cursor: pointer;
+
+            &:hover {
+                background: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+            }
+        }
+    }
+}
+
+.attribution {
+    font-family: $font-1;
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+
+    color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 700px) {
+
+    #box-components {
+        max-width: 670px;
+        flex-wrap: wrap;
+
+        #result-box {
+            border-radius: 0 0 25px 25px;
+            padding: 0;
+        }
+
+        #summary-box {
+            padding: 1em;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    #box-components {
+        max-width: 100%;
+        flex-direction: column;
+
+        #result-box {
+            border-radius: 0 0 25px 25px;
+            padding: 0;
+
+            h1 {
+                font-size: 1em;
+            }
+
+            #circle-shape {
+                width: 150px;
+                height: 150px;
+                margin: 0;
+
+                h2 {
+                    font-size: 3em;
+                }
+
+                p {
+                    font-size: 0.9em;
+                }
+            }
+
+            h3 {
+                margin: 10px 0 5px 0;
+            }
+
+            p {
+                font-size: 0.9em;
+                margin-bottom: 30px;
+            }
+        }
+
+        #summary-box {
+            width: 90%;
+            padding: 0;
+            margin: 0 auto;
+
+            h1 {
+                font-size: 1em;
+                margin: 20px 0;
+            }
+
+            button {
+                margin: 20px 0;
+            }
+        }
+    }
+}
