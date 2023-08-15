@@ -31,21 +31,13 @@ body {
     margin: 0 auto;
     border-radius: 10px;
     background-color: hsl(0, 0%, 100%);
-    height: 100%;
 }
 
 #picture-section {
-    border-radius: 10px;
-    max-width: 100%;
-
-    img {
-        -o-object-fit: cover;
-        object-fit: cover;
-        -o-object-position: center;
-        object-position: center;
-        border-radius: 10px 10px 0 0;
-        width: 100%;
-    }
+    height: 300px;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    background: url('../images/image-product-mobile.jpg') center / cover;
 }
 
 #info-section {
@@ -129,4 +121,29 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1440px) {
+
+    body {
+        background-color: hsl(30, 38%, 92%);
+    }
+
+    #container {
+        display: flex;
+        width: 50%;
+        max-width: 100%;
+        height: 350px;
+
+        #picture-section {
+            width: 50%;
+            height: 100%;
+            background: url('../images/image-product-desktop.jpg') center / cover;
+            border-radius: 10px 0 0 10px;
+        }
+
+        #info-section {
+            width: 50%;
+        }
+    }
 }
