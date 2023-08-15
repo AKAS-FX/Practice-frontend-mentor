@@ -1,0 +1,157 @@
+@font-face {
+  font-family: "Overpass";
+  src: url("../fonts/Overpass-VariableFont_wght.ttf");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  list-style: none;
+  border: none;
+  outline: none;
+}
+
+body {
+  background-color: hsl(216, 12%, 8%);
+  min-height: 100vh;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#container-ask {
+  max-width: 375px;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  margin: 1.3rem;
+}
+
+#icon-star {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 100%;
+  background-color: hsl(212, 19%, 26%);
+  margin-bottom: 1rem;
+}
+
+.title-ask {
+  font-family: "Overpass";
+  color: hsl(0, 0%, 100%);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+
+.txt-ask {
+  font-family: "Overpass";
+  color: hsl(216, 12%, 54%);
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+#list-ask {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+#list-ask .btn {
+  transition: 0.3s ease-out;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-family: "Overpass";
+  background-color: hsl(212, 19%, 26%);
+  width: 45px;
+  height: 45px;
+  border-radius: 2rem;
+  color: hsl(216, 12%, 54%);
+}
+#list-ask .btn:hover {
+  background-color: hsl(216, 12%, 54%);
+  color: hsl(0, 0%, 100%);
+}
+#list-ask .btn:active, #list-ask .btn:focus {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(25, 97%, 53%);
+}
+
+#btn-submit-ask {
+  cursor: pointer;
+  transition: 0.3s ease-out;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-family: "Overpass";
+  color: hsl(0, 0%, 100%);
+  width: 100%;
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: hsl(25, 97%, 53%);
+}
+#btn-submit-ask:active, #btn-submit-ask:focus {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(25, 97%, 53%);
+}
+
+.container-selected {
+  display: none;
+}
+
+.container-selected--on {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Overpass";
+  max-width: 375px;
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  margin: 1.3rem;
+  height: 370px;
+}
+
+#img-send {
+  margin-bottom: 1.3rem;
+}
+
+#you-selected {
+  width: 60%;
+  padding: 1rem;
+  border-radius: 2rem;
+  background-color: hsl(212, 19%, 26%);
+  color: hsl(25, 97%, 53%);
+  margin-bottom: 1.3rem;
+}
+
+.title-select {
+  color: hsl(0, 0%, 100%);
+  font-size: 1.7rem;
+  margin-bottom: 1.3rem;
+}
+
+.txt-send {
+  color: hsl(216, 12%, 54%);
+}
+
+.container-ask--off {
+  display: none;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=main.css.map */
