@@ -17,9 +17,14 @@ body {
   width: 100%;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background: hsl(217, 54%, 11%);
+}
+#container .attribution {
+  position: absolute;
+  bottom: 2%;
 }
 
 .card {
@@ -165,4 +170,10 @@ body {
 .card-content-creator .text-creator span:hover {
   cursor: pointer;
   color: hsl(178, 100%, 50%);
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    max-width: 400px;
+  }
 }/*# sourceMappingURL=style.css.map */

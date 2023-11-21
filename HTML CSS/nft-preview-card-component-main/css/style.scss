@@ -1,4 +1,5 @@
 @use 'variables' as v;
+
 *{
     margin: 0;
     box-sizing: border-box;
@@ -14,9 +15,15 @@ body{
     width: 100%;
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background: v.$darkblue-main;
+
+    .attribution{
+        position: absolute;
+        bottom: 2%;
+    }
 }
 
 .card {
@@ -181,8 +188,13 @@ body{
                 }
             }
         }
-
     }
-
 }
+
+@media screen and (min-width: 1440px) {
+    .card {
+        max-width: 400px;
+        }
+    }
+    
 
